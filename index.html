@@ -256,7 +256,7 @@ plt.show()</pre>
 mass = np.linspace(1.0, 10.0, num=100)
 velocity = np.linspace(1.0, 10.0, num=100)
 
-# Показанный вариант более быстрый.
+# Показанный вариант более быстрый
 kinetic_energy = 0.5 * (mass * np.power(velocity, 2))</pre>
 
 <h3>Как сохранить таблицу в файл?</h3>
@@ -367,7 +367,7 @@ func (p Point) getEuclideanDistance(q Point) float64 {
 
 func main() {
     result := Point{17, 22}.getEuclideanDistance(Point{36, 72})
-    fmt.Println((result - 53.488) &lt; 0.001)
+    fmt.Println(math.Abs(result - 53.488) &lt; 0.001)
 }</pre>
 
 <h3>Как написать поиск элемента в HashMap со сложностью O(1)?</h3>
@@ -466,6 +466,123 @@ func main() {
         }
     }
 }</pre>
+
+<h3>Как написать формулу сигмоиды для логистической регрессии?</h3>
+
+<pre>func sigmoid(x float64) float64 {
+    return 1.0 / (1 + math.Exp(-x))
+}</pre>
+
+<h2>JavaScript</h2>
+
+<h3>Как написать простую библиотеку для закона Ома?</h3>
+
+<pre>const volts = (amperes, ohms) =&gt; amperes * ohms;
+
+const amperes = (volts, ohms) =&gt; volts / ohms;
+
+const ohms = (volts, amperes) =&gt; volts / amperes;
+
+const watts = (volts, amperes) =&gt; volts * amperes;
+
+const voltageDivider = (volts, r1, r2) =&gt; volts * (r2 / (r1 + r2));
+
+
+module.exports = {
+    volts: volts,
+    amperes: amperes,
+    ohms: ohms,
+    watts: watts,
+    voltageDivider: voltageDivider
+};</pre>
+
+<h2>Bash</h2>
+
+<h3>Как создать директорию?</h3>
+
+<pre>mkdir example</pre>
+
+<h3>Как рекурсивно скопировать директорию?</h3>
+
+<pre>cp -r ./example ./example_2</pre>
+
+<h3>Как посмотреть содержимое директории?</h3>
+
+<pre>ls -ltrah</pre>
+
+<h3>Как записать текст в файл?</h3>
+
+<pre>cat &lt;&lt; EOF &gt; example.txt
+EXAMPLE
+EOF</pre>
+
+<h3>Как узнать свободное место на диске?</h3>
+
+<pre>df -h</pre>
+
+<h3>Как посмотреть память? (свободное место)</h3>
+
+<pre>free -h</pre>
+
+<h3>Как посмотреть процессы?</h3>
+
+<pre>ps -A</pre>
+
+<h3>Как загрузить файл?</h3>
+
+<pre>curl -o example_1.html --user-agent &quot;Bot&quot; https://example.com/</pre>
+
+<h3>Как загрузить файл?</h3>
+
+<pre>wget -O example_2.html -U &quot;Bot&quot; https://example.com/</pre>
+
+<h3>Как посмотреть содержимое файла?</h3>
+
+<pre>cat example_1.html | less</pre>
+
+<h3>Как увидеть первые 5 строк?</h3>
+
+<pre>head 5 example_1.html</pre>
+
+<h3>Как увидеть крайние 5 строк?</h3>
+
+<pre>tail 5 example_1.html</pre>
+
+<h3>Как посчитать количество строк, слов и байт?</h3>
+
+<pre>wc example_1.html</pre>
+
+<h3>Как определить контрольную сумму?</h3>
+
+<pre>md5sum example_1.html</pre>
+
+<h3>Как определить контрольную сумму?</h3>
+
+<pre>sha1sum example_1.html</pre>
+
+<h3>Как найти в файле подстроку?</h3>
+
+<pre>grep -r &quot;&lt;title&gt;&quot; *</pre>
+
+<h3>Как искать файлы по расширению?</h3>
+
+<pre>find ./ -iname &quot;*.html&quot;</pre>
+
+<h3>Как создать архив?</h3>
+
+<pre>tar -cvzf example.tar.gz ./</pre>
+
+<h3>Как извлечь файлы из архива?</h3>
+
+<pre>tar -xvzf example.tar.gz -C ./</pre>
+
+<h3>Как зашифровать файл?</h3>
+
+<pre>gpg -c example.tar.gz</pre>
+
+<h3>Как расшифровать файл?</h3>
+
+<pre>gpg -d example.tar.gz.gpg &gt; example-copy.tar.gz</pre>
 
 </div>
 </div>
